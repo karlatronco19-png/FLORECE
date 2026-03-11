@@ -32,7 +32,7 @@ body::after{content:'';position:fixed;top:-40%;left:-20%;width:80%;height:80%;ba
 .section{display:none;padding:0 16px}
 .section.active{display:block;animation:fadeUp 0.3s ease}
 @keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-.topbar{padding:52px 16px 8px;display:flex;align-items:flex-end;justify-content:space-between}
+.topbar{padding:calc(env(safe-area-inset-top, 0px) + 52px) 16px 8px;display:flex;align-items:flex-end;justify-content:space-between}
 .page-title{font-family:'Playfair Display',serif;font-size:1.7rem;font-weight:400;line-height:1.1}
 .page-title em{font-style:italic;color:var(--green)}
 .topbar-right{font-size:0.75rem;color:var(--mid);text-align:right;line-height:1.5}
@@ -105,7 +105,7 @@ canvas#wChart{width:100%!important;height:160px!important}
 .spinner{width:26px;height:26px;border:2.5px solid var(--border2);border-top-color:var(--green);border-radius:50%;animation:spin 0.7s linear infinite;margin:0 auto 10px}
 @keyframes spin{to{transform:rotate(360deg)}}
 .loader-text{font-size:0.82rem;color:var(--mid)}
-#toast{position:fixed;top:60px;left:50%;transform:translateX(-50%) translateY(-80px);background:var(--green);color:#0d1a10;padding:10px 22px;border-radius:30px;font-size:0.85rem;font-weight:600;z-index:999;transition:transform 0.3s;white-space:nowrap}
+#toast{position:fixed;top:calc(env(safe-area-inset-top, 0px) + 60px);left:50%;transform:translateX(-50%) translateY(-80px);background:var(--green);color:#0d1a10;padding:10px 22px;border-radius:30px;font-size:0.85rem;font-weight:600;z-index:999;transition:transform 0.3s;white-space:nowrap}
 #toast.show{transform:translateX(-50%) translateY(0)}
 .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:200;display:none;align-items:flex-end;justify-content:center}
 .modal-overlay.open{display:flex;animation:fadeIn 0.2s}
@@ -119,7 +119,7 @@ canvas#wChart{width:100%!important;height:160px!important}
 .empty{text-align:center;padding:32px 20px;color:var(--mid)}
 .empty-icon{font-size:2.5rem;opacity:0.4;margin-bottom:8px}
 .empty-text{font-size:0.85rem;line-height:1.6}
-.greeting-block{padding:48px 16px 20px}
+.greeting-block{padding:calc(env(safe-area-inset-top, 48px) + 48px) 16px 20px}
 .greeting-sub{font-size:0.8rem;color:var(--mid);margin-bottom:4px;text-transform:uppercase;letter-spacing:0.06em}
 .greeting-name{font-family:'Playfair Display',serif;font-size:2rem;line-height:1.1}
 .greeting-name em{font-style:italic;color:var(--green)}
